@@ -14,9 +14,8 @@
 			p.fill('yellow');
 			p.stroke(0,100,0);
 			p.strokeWeight(5);
-			p.ellipse(200,200,200);
+			p.ellipse(p.mouseX,p.mouseY,200);
 		};
 	};
 	new p5(mySketch,document.getElementById('sketch'));
-	console.log('Script ran');
 </script>
