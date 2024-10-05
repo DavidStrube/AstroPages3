@@ -1,5 +1,5 @@
 ---
-
+import P5Island from "../components/P5Island.astro"
 ---
 
 <html lang="en">
@@ -13,25 +13,7 @@
 	<body>
 		<h1>Astro - Hello Dave</h1>
 		<p>Did it deploy?</p>
-		<div id="sketch"></div>
+		<P5Island />
 	</body>
 </html>
 
-<script>
-	import p5 from 'p5';
-	const mySketch = (p) => {
-		p.setup = () => {
-			p.createCanvas(400,400);
-		};
-
-		p.draw = () => {
-			p.background(220);
-			p.fill('red');
-			p.stroke(0,100,0);
-			p.strokeWeight(5);
-			p.ellipse(200,200,200);
-		};
-	};
-	new p5(mySketch,document.getElementById('sketch'));
-	console.log('Script ran');
-</script>
